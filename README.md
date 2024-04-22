@@ -1,3 +1,14 @@
+# Simple Terminal
+## Patch contents: 
+- transparency
+- clipboard support
+- scroll with Shift + J/K (vim bindings)
+- autocomplete
+
+## Installation
+1. Get the st base from cloning the git url here: https://st.suckless.org/
+2. Copy the contents of the st-patches folder inside the directory where the st source files are located e.g `cp -R st-patches/* ./st`, then run `chmod +x patch.sh` and then ./patch.sh, this will auto patch
+
 # Preview:
 
 <details>
