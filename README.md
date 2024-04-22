@@ -1,3 +1,13 @@
+# My workspace
+- zsh with no powerlevel or omz bloat, but still keeping nice QOL plugins and useful PS1
+- st with must have patches imo (just remove the ones you dont wnat from st-patches/patches folder)
+- fancy polybar
+- i3wm config with vim-like bindings
+- vim with must have plugins for software development
+- packages.md with everything that i use
+- Everything tested and i use those configs everyday at my job, to study and even play games, so its not only fancy but functional and trustworthy 
+
+
 # Simple Terminal
 ## Patch contents: 
 - transparency
