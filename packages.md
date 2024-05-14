@@ -5,11 +5,11 @@ pulseaudio
 ranger
 rofi || dmenu
 vim
-picom
 neofetch
 feh
 st (simple terminal)
 vim-plug
+lxsession-gtk3 (lightweight polkit so you can interact with GUI apps that require sudo)
 
 # QOL
 flameshot
@@ -19,6 +19,7 @@ pavucontrol
 keepassxc
 thunar
 firefox
+picom (for transparency, can be ommited if youre using an old nvidia driver or something that breaks it)
 
 # Gaming (Personal)
 lutris

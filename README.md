@@ -1,3 +1,19 @@
+# Featured dotfiles
+1. i3wm 4.23 +
+2. Polybar
+3. st
+4. vim
+5. Some other small stuff
+
+# Guide
+<p> Just copy the dotfiles to each respective directory after installing the required packages mentioned in the .md file, after that copy and paste the st-patches stuff inside your ST install </p>
+<p> PS: If you want startup scripts, just create a folder named Scripts inside your home (~/) and a file there called startup.sh (remeber to chmod +x it) </p>
+
+# Hotkeys
+1. Mod + Shift + S  = screenshot interactive (flameshot)
+2. Shift + C = copy from terminal (st)
+3. Shift + V = paste in terminal (st) 
+
 # Preview:
 
 <details>
