@@ -7,7 +7,7 @@
 2. Shift + C = copy from terminal (st)
 3. Shift + V = paste in terminal (st) 
 
-# My workspace
+# Why use this? 
 - zsh with no powerlevel or omz bloat, but still keeping nice QOL plugins and useful PS1
 - st with must have patches imo (just remove the ones you dont wnat from st-patches/patches folder)
 - fancy polybar
