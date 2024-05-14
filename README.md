@@ -13,6 +13,28 @@
 1. Mod + Shift + S  = screenshot interactive (flameshot)
 2. Shift + C = copy from terminal (st)
 3. Shift + V = paste in terminal (st) 
+=======
+# My workspace
+- zsh with no powerlevel or omz bloat, but still keeping nice QOL plugins and useful PS1
+- st with must have patches imo (just remove the ones you dont wnat from st-patches/patches folder)
+- fancy polybar
+- i3wm config with vim-like bindings
+- vim with must have plugins for software development
+- packages.md with everything that i use
+- Everything tested and i use those configs everyday at my job, to study and even play games, so its not only fancy but functional and trustworthy 
+
+
+# Simple Terminal
+## Patch contents: 
+- transparency
+- clipboard support
+- scroll with Shift + J/K (vim bindings)
+- autocomplete
+
+## Installation
+1. Get the st base from cloning the git url here: https://st.suckless.org/
+2. Copy the contents of the st-patches folder inside the directory where the st source files are located e.g `cp -R st-patches/* ./st`, then run `chmod +x patch.sh` and then ./patch.sh, this will auto patch
+>>>>>>> f08a948d3681a3e5a98c0a7188dc7d4b054e79ec
 
 # Preview:
 
