@@ -1,7 +1,46 @@
-# ABNT2 Keyboard (Brazilian)
-setxkbmap -model abnt2 -layout br
+#
+# --------------------- EXPORTS  ----------------------
+#
+# Vim as default editor
+export EDITOR="$VISUAL"
+
+# For compatibility with legacy stuff that uses the VISUAL var
+export VISUAL=vim
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.rvm/scripts/rvm
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+#pipx
+export PATH="$PATH:$HOME/.local/bin"
+
+#dotnet
+export PATH="$PATH:$HOME.dotnet/tools"
+
+# appimages
+export PATH="$PATH:$HOME/Applications"
+
+#emacs
+export PATH="$PATH:$HOME/.config/emacs/bin"
+
+# Personal paths
+export BOOKS="$HOME/Books"
 
 
+
+#
+# --------------------- ZSH STUFF  ----------------------
+#
 # Enable command colors like bash
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -18,7 +57,7 @@ fi
 autoload -U colors && colors
 
 # Completion
-zstyle :compinstall filename '/home/akira/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -40,7 +79,7 @@ set_PS1() {
 	USER_INFO="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M]"
 	END_INDICATOR="%{$reset_color%}%(!.#.$)%b"
 	CURRENT_FOLDER="%{$fg[magenta]%}[%c]"
-	PS1="$USER_INFO$CURRENT_FOLDER$GIT_INFO $END_INDICATOR "
+	PS1="$USER_INFO$CURRENT_FOLDER $GIT_INFO $END_INDICATOR "
 
 }
 PROMPT_COMMAND=set_PS1
@@ -48,27 +87,15 @@ precmd() { eval "$PROMPT_COMMAND" }
 # END CUSTOM PS1
 
 # History in cache directory:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.cache/zsh/history
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# RVM
-export PATH="$PATH:$HOME/.rvm/bin"
-source $HOME/.rvm/scripts/rvm
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Plugins
+# ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
+
+
 
 # Fancy
 neofetch 

@@ -1,4 +1,6 @@
 set $mod Mod4
+set $mod1 Mod1
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -11,16 +13,25 @@ gaps inner 8
 gaps outer 4
 workspace_layout tabbed
 
-exec_always --no-startup-id picom -experimental-backends --backend glx --blur-method dual_kawase --blur-strength 4
-
+# Background
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wpp.jpg
 
+# Support for startup scripts
+exec_always  --no-startup-id /usr/bin/sh ~/Scripts/startup.sh
+
+# Should be fixed, kind of bloatware but i just cant force my PC to not sleep using systemd commands only, anyway...
+exec_always --no-startup-id nohup xfce4-power-manager &
+
+# Polkit for GUI apps requesting root access (gparted for example)
+exec_always --no-startup-id nohup /usr/bin/lxpolkit &
+
+# i3wm
 exec --no-startup-id dex --autostart --environment i3
 
-exec_always --no-startup-id /home/akira/.config/polybar/launch.sh --panels
+# polybar 
+exec_always --no-startup-id ~/.config/polybar/launch.sh --panels
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
+# Network manager applet
 exec --no-startup-id nm-applet
 
 # Use Mouse+$mod to drag floating windows to their wanted position

@@ -25,8 +25,8 @@
 - lutris
 - steam
 
-
 # Programming (Personal)
+- emacs
 - rvm
 - nvm
 - pyenv
