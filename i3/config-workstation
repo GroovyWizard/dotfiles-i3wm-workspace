@@ -31,6 +31,9 @@ exec --no-startup-id dex --autostart --environment i3
 # polybar 
 exec_always --no-startup-id ~/.config/polybar/launch.sh --panels
 
+# Network manager applet
+exec --no-startup-id nm-applet
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -39,8 +42,8 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec st
 
-# screenshot 
-bindsym $mod+Shift+s --release exec scrot -s -e 'xclip -selection clipboard -t image/png -i $f'
+# screenshoot
+bindsym $mod+Shift+s exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
